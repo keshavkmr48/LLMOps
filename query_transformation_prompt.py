@@ -2,7 +2,7 @@ from langchain.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
 from langchain_core.output_parsers import StrOutputParser
 from langchain.load import dumps, loads
-from LLMOPS.query_transformation.prompts import multiquery_template
+from LLMOps.query_transformation.prompts import multiquery_template
 print(multiquery_template)
 
 class QueryTransformationPrompt:

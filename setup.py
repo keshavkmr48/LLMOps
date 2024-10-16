@@ -28,9 +28,9 @@ setup(
     install_requires=dependencies,
     include_package_data=True,  # To include any non-Python files specified in MANIFEST.in
     description="A package for LLMOps related tasks",  # Short description
-    author="Your Name",  # Your name or the team's name
-    author_email="your.email@example.com",  # Your contact email
-    url="https://your-project-repository-url.com",  # URL of the project repository
+    author="keshav Kumar",  # Your name or the team's name
+    author_email="keshavkmr076@gmail.com",  # Your contact email
+    url="https://github.com/keshavkmr48/LLMOps",  # URL of the project repository
     classifiers=[
         "Programming Language :: Python :: 3",  # Specify Python versions supported
         "License :: OSI Approved :: MIT License",  # License type
