@@ -1,6 +1,6 @@
 from data_ingestion.vectorDB.Loading.data_loader import WebBaseDataLoader
 from data_ingestion.vectorDB.chunking.data_splitting import RecursiveSplitter
-from data_ingestion.vectorDB.embedding.data_embeddings import HuggingFaceBgeEmbeddings
+from data_ingestion.vectorDB.embedding.data_embeddings import HuggingFaceEmbeddings
 from data_ingestion.vectorDB.indexing.data_indexing import FAISSIndexing
 from dotenv import load_dotenv, find_dotenv
 
@@ -30,7 +30,7 @@ class DataIngestion:
             self.splits=self.textsplitter.text_splitting()
     
     def data_embedding(self):
-        embeddings_model=HuggingFaceBgeEmbeddings()
+        embeddings_model=HuggingFaceEmbeddings()
         self.embeddings=embeddings_model.create_embeddings()
 
     def data_indexing(self):
@@ -40,8 +40,24 @@ class DataIngestion:
                 self.vectore_store=self.index.index_embeddings()
                 self.index.save_index()
     
+    def ingest(self):
+        self.data_loading()
+        print("loading done ..")
+        self.data_splitting()
+        print("splitting done ..")
+        self.data_embedding()
+        print("embedding done ..")
+        self.data_indexing()
+        print("indexing done ..")
+        
 
 
     
+if __name__=="__main__":
+
+    data_ingestion_pipeline=DataIngestion()
+    data_ingestion_pipeline.ingest()
+    print("ingestion completed.")
+
 
 

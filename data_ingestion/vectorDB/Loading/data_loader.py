@@ -15,13 +15,13 @@ class WebBaseDataLoader(DataLoader):
         self.docs=None
 
     def loading(self):
-        self.loader = WebBaseDataLoader(
+        self.loader = WebBaseLoader(
             web_paths=(self.web_paths,),
-            bs_kwarg = dict(
-                parse_only=bs4.SoupStrainer(
-                    class_=self.content_class
-                )
-            ),
+            # bs_kwarg = dict(
+            #     parse_only=bs4.SoupStrainer(
+            #         class_=self.content_class
+            #     )
+            # ),
         )
 
         self.docs=self.loader.load()

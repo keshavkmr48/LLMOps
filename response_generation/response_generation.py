@@ -34,6 +34,7 @@ class ResponseGeneration:
             )
 
             self.response = self.response_chain.invoke(self.user_query)
+            return self.response
         except Exception as e :
             raise ResponseGenerationError(f"ErrorMessage : Response Generation failed due to follwoing exception- {e}")
         

@@ -3,7 +3,7 @@ from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 import os
 
-index_path = os.getenv['index_path']
+index_path = os.getenv('index_path')
 
 class DataIndexing:
     def __init__(self, splits, embeddings):

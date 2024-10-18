@@ -14,8 +14,8 @@ class DocumentRetrieval:
     
 
 class MultiQueryRetrieval(DocumentRetrieval):
-    def __init__(self):
-        super().__init__(retriever=None, query=None, query_chain=None)
+    def __init__(self,retriever,query, query_chain):
+        super().__init__(retriever=retriever, query=query, query_chain=query_chain)
 
     def retrieve_documents(self):
         if (self.retriever !=None):

@@ -16,8 +16,8 @@ class RecursiveSplitter(DataSplitting):
 
     
     def text_splitting(self):
-        self.text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(chunk_size=self.chunk_size, 
-                                                                                  chunk_overlap=self.chunk_overlap)
+        self.text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(chunk_size=int(self.chunk_size), 
+                                                                                  chunk_overlap=int(self.chunk_overlap))
         self.splits=self.text_splitter.split_documents(self.docs)
 
         return self.splits
