@@ -2,6 +2,10 @@
 requires = ['setuptools>=42.0', "wheel"]
 build-backend = "setuptools.build_meta"
 
+[tool.poetry]
+packages = [{ include = "LLMOps", from = "src" }]
+
+
 [tool.pytest.ini_options]
 testpaths = [
     "tests"
