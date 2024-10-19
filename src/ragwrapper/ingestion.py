@@ -21,12 +21,15 @@ class DataIngestion:
     def data_loading(self):
 
         if os.getenv('loader_type') == "web-base":
-            self.loader = WebBaseDataLoader(web_paths=os.getenv('web_path'), content_class=os.getenv('content_class'))
+            self.loader = WebBaseDataLoader(web_paths=os.getenv('web_path'),
+                                            content_class=os.getenv('content_class'))
             self.docs = self.loader.loading()
 
     def data_splitting(self):
         if self.docs is not None:
-            self.textsplitter = RecursiveSplitter(self.docs, chunk_size=os.getenv('chunk_size'), chunk_overlap=os.getenv('chunk_overlap'))
+            self.textsplitter = RecursiveSplitter(self.docs,
+                                                  chunk_size=os.getenv('chunk_size'),
+                                                  chunk_overlap=os.getenv('chunk_overlap'))
             self.splits = self.textsplitter.text_splitting()
 
     def data_embedding(self):
@@ -36,7 +39,8 @@ class DataIngestion:
     def data_indexing(self):
         if (self.splits is not None) and (self.embeddings is not None):
             if os.getenv('index_type') == 'faiss':
-                self.index = FAISSIndexing(self.splits, self.embeddings, index_path=os.getenv('index_path'))
+                self.index = FAISSIndexing(self.splits, self.embeddings,
+                                           index_path=os.getenv('index_path'))
                 self.vectore_store = self.index.index_embeddings()
                 self.index.save_index()
 

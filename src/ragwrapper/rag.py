@@ -7,8 +7,8 @@ import os
 
 load_dotenv(find_dotenv())
 
-model = os.getenv("model", None)
-llm = ChatGroq(model=model, temperature=0)
+model = os.getenv("model", "llama3-8b-8192")
+llm = ChatGroq(model=model, temperature=0,) # type: ignore
 query = input()
 query_transformation_type = "Multi-Query"
 
