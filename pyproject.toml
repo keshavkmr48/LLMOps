@@ -7,9 +7,8 @@ packages = [{ include = "LLMOps", from = "src" }]
 
 
 [tool.pytest.ini_options]
-testpaths = [
-    "tests"
-    ]
+testpaths = ["tests/unit"]
+python_files = ["test_*.py", "*_test.py"]
 
 [tool.mypy]
 mypy_path = "src"
