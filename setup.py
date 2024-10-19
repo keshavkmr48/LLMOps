@@ -51,7 +51,7 @@ setup(
     classifiers=[
         "Programming Language :: Python :: 3",  # Specify Python versions supported
         "License :: OSI Approved :: Apache-2.0",  # License type
-        "Operating System :: OS Independent",
+        "Operating System :: Ubuntu",
     ],
-    python_requires='>=3.10',  # Python version compatibility
+    python_requires='==3.10',  # Python version compatibility
 )
