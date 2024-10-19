@@ -71,7 +71,7 @@ tenacity==9.0.0
 threadpoolctl==3.5.0
 tiktoken==0.8.0
 tokenizers==0.20.1
-tomli==2.0.2
+tomli
 torch==2.5.0
 tqdm==4.66.5
 transformers==4.45.2
