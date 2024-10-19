@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 import pkg_resources
 
 
-# with open('README.md', 'r', encoding='utf-8') as f:
-#     long_description = f.read()     
+with open('README.md', 'r', encoding='utf-8') as f:
+    long_description = f.read()     
    
 
 __version__ = "0.0.1"
@@ -41,6 +41,7 @@ setup(
     install_requires=dependencies,
     include_package_data=True,  # To include any non-Python files specified in MANIFEST.in
     description="A package for LLMOps related tasks",  # Short description
+    
     author="keshav Kumar",  # Your name or the team's name
     author_email=AUTHOR_EMAIL,  # Your contact email
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",  # URL of the project repository
