@@ -41,7 +41,8 @@ setup(
     install_requires=dependencies,
     include_package_data=True,  # To include any non-Python files specified in MANIFEST.in
     description="A package for LLMOps related tasks",  # Short description
-    
+    long_description = long_description,
+    long_description_content_type = "text/markdown",
     author="keshav Kumar",  # Your name or the team's name
     author_email=AUTHOR_EMAIL,  # Your contact email
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",  # URL of the project repository
