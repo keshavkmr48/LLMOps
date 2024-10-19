@@ -8,7 +8,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 __version__ = "0.0.1"
 REPO_NAME = "LLMOps"
-PKG_NAME= "llmops"
+PKG_NAME= "rag-wrapper"
 AUTHOR_USER_NAME = "keshavkmr48"
 AUTHOR_EMAIL = "keshavkmr076@gmail.com"
 
