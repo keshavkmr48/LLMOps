@@ -1,7 +1,7 @@
 from langchain.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from LLMOps.query_transformation.prompts_template import multiquery_template
-from exception import MissingResourceError
+from .prompts_template import multiquery_template
+from ..exception import MissingResourceError
 
 
 class QueryTransformationPrompt:

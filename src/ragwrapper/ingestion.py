@@ -1,7 +1,7 @@
-from data_ingestion.vectorDB.Loading.data_loading import WebBaseDataLoader
-from data_ingestion.vectorDB.chunking.data_splitting import RecursiveSplitter
-from data_ingestion.vectorDB.embedding.data_embeddings import HuggingFaceEmbeddings
-from data_ingestion.vectorDB.indexing.data_indexing import FAISSIndexing
+from .data_ingestion.vectorDB.Loading.data_loading import WebBaseDataLoader
+from .data_ingestion.vectorDB.chunking.data_splitting import RecursiveSplitter
+from .data_ingestion.vectorDB.embedding.data_embeddings import HuggingFaceEmbeddings
+from .data_ingestion.vectorDB.indexing.data_indexing import FAISSIndexing
 from dotenv import load_dotenv, find_dotenv
 
 import os

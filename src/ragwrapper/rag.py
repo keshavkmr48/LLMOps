@@ -1,14 +1,14 @@
 from langchain_groq import ChatGroq
-from LLMOps.query_transformation.query_transformation import MultiQueryTransformationPrompt
-from document_retrieval.document_retrieval import MultiQueryRetrieval
-from response_generation.response_generation import ResponseGeneration
+from .query_transformation.query_transformation import MultiQueryTransformationPrompt
+from .document_retrieval.document_retrieval import MultiQueryRetrieval
+from .response_generation.response_generation import ResponseGeneration
 from dotenv import load_dotenv, find_dotenv
 import os
 
 load_dotenv(find_dotenv())
 
 model = os.getenv("model", "llama3-8b-8192")
-llm = ChatGroq(model=model, temperature=0,) # type: ignore
+llm = ChatGroq(model=model, temperature=0,)  # type: ignore
 query = input()
 query_transformation_type = "Multi-Query"
 

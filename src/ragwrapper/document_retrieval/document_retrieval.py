@@ -1,6 +1,6 @@
 
-from exception import MissingResourceError
-from utils import get_unique_union
+from ..exception import MissingResourceError
+from ..utils import get_unique_union
 
 
 class DocumentRetrieval:

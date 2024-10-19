@@ -1,8 +1,8 @@
 from langchain_core.runnables import RunnablePassthrough
 from langchain.prompts import ChatPromptTemplate
 from langchain_core. output_parsers import StrOutputParser
-from LLMOps.response_generation.response_prompts_template import reponse_prompt_template
-from exception import MissingResourceError, ResponseGenerationError
+from .response_prompts_template import reponse_prompt_template
+from ..exception import MissingResourceError, ResponseGenerationError
 
 
 class ResponseGeneration:
