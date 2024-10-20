@@ -11,7 +11,7 @@ class DataEmbeddings:
 
 class HuggingFaceEmbeddings(DataEmbeddings):
     def __init__(self):
-        super().__init__(model=os.getenv('embedding_model'))
+        super().__init__(model=os.getenv('embedding_model',"BAAI/bge-small-en"))
         self.model_kwargs = {"device": "cpu"}
         self.encode_kwargs = {"normalize_embeddings": True}
         self.embeddings = None
